@@ -1,0 +1,57 @@
+ {% extends "base.html" %}
+ {% load staticfiles %}
+
+{% block content %}
+<nav class="navbar" style = "background-color: #121D2D">
+      <div class="container">
+        <div class="navbar-header">
+          <!--
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  -->
+          <a class="navbar-brand" href="#">Michael Fassbender Fan Page</a>
+        </div>
+         <!--
+		<div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav"> 
+		 <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+			-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron" style = "background-color: #C5B2A0">
+  <div class="container">
+  <div class= "row">
+		<div class = 'col-md-6 pull-right' style = 'text-align:center'>
+			<i class="fa fa-share-alt fa-5x"></i>
+			<h1>Invite Friends &amp; Earn Rewards</h1>
+			<p>This is my site</p>
+			<div class="well" style = 'background-color:white'>{{ ref_url }}</div>
+			</br>
+			Share</br>
+			<i class="fa fa-facebook-official fa-4x" style = "color:#3b5998"></i>
+			</br>
+		</div>	
+		
+		<div class = 'col-md-6 pull-left'>
+			<img src="{% static 'img/abs_eutelsat_launch_streak.jpg' %}" class='img-responsive img-rounded' />
+		</div>
+	</div>
+  </div>
+</div>
+<div class='container'>
+
+{{ ref_id }}<br/>
+
+{{ count }}<br/>
+
+{% endblock %}
